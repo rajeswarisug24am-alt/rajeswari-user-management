@@ -1,0 +1,99 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>User Management System</h1>
+            <p>Manage users using HTML, CSS and JavaScript</p>
+        </header>
+
+        <section class="form-section">
+            <h2 id="formTitle">Add New User</h2>
+
+            <form id="userForm">
+                <input type="hidden" id="userId">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Enter your age"
+                    min="1"
+                    max="120"
+                    required
+                >
+
+                <button type="submit" id="submitBtn">
+                    Add User
+                </button>
+
+                <button
+                    type="button"
+                    id="cancelBtn"
+                    class="cancel-btn hidden"
+                >
+                    Cancel
+                </button>
+            </form>
+
+            <p id="message"></p>
+        </section>
+
+        <section class="users-section">
+            <h2>All Users</h2>
+
+            <input
+                type="search"
+                id="search"
+                placeholder="Search users..."
+            >
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="userTable">
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">Loading users...</p>
+        </section>
+
+        <footer>
+            <p>User Management System | Node.js + Express + MongoDB</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
